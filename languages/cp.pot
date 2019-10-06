@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: content.php conversion\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-22 18:49-0400\n"
+"POT-Creation-Date: 2019-08-24 17:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Unknown\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Loco-Parser: loco_parse_po\n"
 "X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:9
@@ -26,6 +26,20 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
+#: archive.php:23 index.php:17 search.php:28
+msgid "Previous page"
+msgstr ""
+
+#: archive.php:24 index.php:18 search.php:29
+msgid "Next page"
+msgstr ""
+
+#: archive.php:25 index.php:19 search.php:30
+#: template-parts/content-aside.php:33 template-parts/content-page.php:18
+#: template-parts/content-single.php:27 template-parts/content.php:33
+msgid "Page"
+msgstr ""
+
 #: comments.php:15
 msgid "1 Comment"
 msgstr ""
@@ -34,68 +48,168 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: comments.php:44
+#: comments.php:43
 msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:22
-msgid "<a href=\"https://theme.chenpan.xyz/cp\" rel=\"designer\">CP is designed by Pan Chen.</a>"
+msgid "<a href=\"https://blog.panchen.xyz/cp/\" rel=\"designer\">CP is developed by Pan Chen</a>"
 msgstr ""
 
-#: functions.php:42
+#: footer.php:24
+msgid "<a href=\"https://wordpress.org\">Proudly powered by WordPress</a>"
+msgstr ""
+
+#: functions.php:44
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:43
+#: functions.php:45
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:134
 msgid "Left Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:136
 msgid "The left widget area in the popout panel."
 msgstr ""
 
-#: functions.php:133
+#: functions.php:146
 msgid "Middle Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:148
 msgid "The middle widget area in the popout panel."
 msgstr ""
 
-#: functions.php:145
+#: functions.php:158
 msgid "Right Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:160
 msgid "The right widget area in the popout panel."
 msgstr ""
 
-#: functions.php:157
+#: functions.php:170
 msgid "Footer's Left Widget Area"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:172
 msgid "The left widget area in the footer."
 msgstr ""
 
-#: functions.php:169
+#: functions.php:182
 msgid "Footer's Middle Widget Area"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:184
 msgid "The middle widget area in the footer."
 msgstr ""
 
-#: functions.php:181
+#: functions.php:194
 msgid "Footer's Right Widget Area"
 msgstr ""
 
-#: functions.php:183
+#: functions.php:196
 msgid "The right widget area in the footer."
+msgstr ""
+
+#: functions.php:226
+msgid "Location"
+msgstr ""
+
+#: functions.php:231
+msgid "Weather"
+msgstr ""
+
+#: functions.php:234
+msgid "Sunny"
+msgstr ""
+
+#: functions.php:234
+msgid "Cloudy"
+msgstr ""
+
+#: functions.php:234
+msgid "Partly cloudy"
+msgstr ""
+
+#: functions.php:234
+msgid "Rainy"
+msgstr ""
+
+#: functions.php:234
+msgid "Snowy"
+msgstr ""
+
+#: functions.php:234
+msgid "Sleeting"
+msgstr ""
+
+#: functions.php:234
+msgid "Stormy"
+msgstr ""
+
+#: functions.php:234
+msgid "Lightning"
+msgstr ""
+
+#: functions.php:234
+msgid "Thunder"
+msgstr ""
+
+#: functions.php:234
+msgid "Hailing"
+msgstr ""
+
+#: functions.php:234
+msgid "Windy"
+msgstr ""
+
+#: functions.php:234
+msgid "Foggy"
+msgstr ""
+
+#: functions.php:256
+msgid "Mood"
+msgstr ""
+
+#: functions.php:259
+msgid "Happy"
+msgstr ""
+
+#: functions.php:259
+msgid "Sad"
+msgstr ""
+
+#: functions.php:259
+msgid "Hypnotic"
+msgstr ""
+
+#: functions.php:259
+msgid "Romantic"
+msgstr ""
+
+#: functions.php:259
+msgid "Mysterious"
+msgstr ""
+
+#: functions.php:259
+msgid "Doubtful"
+msgstr ""
+
+#: functions.php:259
+msgid "Cool"
+msgstr ""
+
+#: functions.php:259
+msgid "Angry"
+msgstr ""
+
+#: functions.php:286
+msgid "Today"
 msgstr ""
 
 #: header.php:12
@@ -106,103 +220,182 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:22
-msgid "Main Text Color"
+#: inc/customizer.php:23
+msgid "Primary Text Color"
 msgstr ""
 
-#: inc/customizer.php:31
-msgid "Layout"
-msgstr ""
-
-#: inc/customizer.php:42
-msgid "Change Layout"
-msgstr ""
-
-#: inc/customizer.php:47
-msgid "Full Width"
+#: inc/customizer.php:35
+msgid "Secondary Text Color"
 msgstr ""
 
 #: inc/customizer.php:48
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Popout Panel Color"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Selection Color"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Theme Color"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Change the color in the address bar, supported by Google Chrome Android."
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Change Layout"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer.php:125
 msgid "One Column"
 msgstr ""
 
-#: inc/template-tags.php:57
+#: inc/customizer.php:137
+msgid "Header sticky or not"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Sticky Header"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid "Regular Header"
+msgstr ""
+
+#: inc/customizer.php:156
+msgid "Display breadcrumbs or not"
+msgstr ""
+
+#: inc/customizer.php:161 inc/customizer.php:185
+msgid "Display Breadcrumbs"
+msgstr ""
+
+#: inc/customizer.php:162 inc/customizer.php:186 inc/customizer.php:187
+msgid "Hide Breadcrumbs"
+msgstr ""
+
+#: inc/customizer.php:169
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Select a font for your website title"
+msgstr ""
+
+#: inc/customizer.php:193
+msgid "Others"
+msgstr ""
+
+#: inc/customizer.php:206
+msgid "Show or Hide Author Meta"
+msgstr ""
+
+#: inc/customizer.php:207
+msgid "We remmend you hide author meta if the website has only one author."
+msgstr ""
+
+#: inc/customizer.php:212 inc/customizer.php:230
+msgid "Display"
+msgstr ""
+
+#: inc/customizer.php:213 inc/customizer.php:231
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:224
+msgid "Display Aside or not"
+msgstr ""
+
+#: inc/customizer.php:225
+msgid "Display posts of format aside in pages other than Aside Archive or not."
+msgstr ""
+
+#: inc/template-tags.php:120
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:158 template-parts/content-search.php:18
-#: template-parts/content.php:22
+#: inc/template-tags.php:221 template-parts/content-aside.php:21
+#: template-parts/content-search.php:18 template-parts/content.php:22
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/template-tags.php:308
+#: inc/template-tags.php:371
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
 msgstr ""
 
-#: inc/template-tags.php:311
+#: inc/template-tags.php:374
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:380
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:322
+#: inc/template-tags.php:385
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:352
+#: inc/template-tags.php:418
 msgid "Comment"
 msgstr ""
 
-#: inc/template-tags.php:353
+#: inc/template-tags.php:419
 msgid "Write down your thoughts here!"
 msgstr ""
 
-#: inc/template-tags.php:357
+#: inc/template-tags.php:423
 msgid "Name"
 msgstr ""
 
-#: inc/template-tags.php:360
+#: inc/template-tags.php:426
 msgid "Name *"
 msgstr ""
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:429
 msgid "Email"
 msgstr ""
 
-#: inc/template-tags.php:366
+#: inc/template-tags.php:432
 msgid "Email *"
 msgstr ""
 
-#: inc/template-tags.php:369
+#: inc/template-tags.php:435
 msgid "Website"
 msgstr ""
 
-#: inc/template-tags.php:371
+#: inc/template-tags.php:437
 msgid "Your website"
-msgstr ""
-
-#: index.php:22 search.php:28
-msgid "Previous page"
-msgstr ""
-
-#: index.php:23 search.php:29
-msgid "Next page"
-msgstr ""
-
-#: index.php:24 search.php:30 template-parts/content-page.php:18
-#: template-parts/content-single.php:27 template-parts/content.php:33
-msgid "Page"
 msgstr ""
 
 #: search.php:15
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:10
+msgid "Search &hellip;"
 msgstr ""
 
 #: single.php:27
@@ -221,6 +414,18 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
+#: template-parts/content-aside.php:29 template-parts/content-page.php:14
+#: template-parts/content-single.php:23 template-parts/content.php:29
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-aside.php:46 template-parts/content-page.php:28
+#: template-parts/content-search.php:32 template-parts/content-search.php:46
+#: template-parts/content-single.php:40 template-parts/content.php:45
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
 #: template-parts/content-none.php:9
 msgid "Nothing Found"
 msgstr ""
@@ -236,18 +441,6 @@ msgstr ""
 
 #: template-parts/content-none.php:24
 msgid "There is nothing. Perhaps searching can help!"
-msgstr ""
-
-#: template-parts/content-page.php:14 template-parts/content-single.php:23
-#: template-parts/content.php:29
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content-page.php:28 template-parts/content-search.php:32
-#: template-parts/content-search.php:46 template-parts/content-single.php:40
-#: template-parts/content.php:45
-#, php-format
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: template-parts/content.php:10

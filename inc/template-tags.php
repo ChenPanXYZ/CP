@@ -1,8 +1,7 @@
 <?php
 /**
- * Custom Twenty Sixteen template tags
+ * Custom CP template tags
  *
- * Eventually, some of the functionality here could be replaced by core features.
  */
 if ( ! function_exists('cp_breadcrumbs')):
 	/*Show Breadcrumbs in content-single if and only if this article is categorized.*/
@@ -23,9 +22,73 @@ if ( ! function_exists('cp_breadcrumbs')):
 	}
 endif;
 
+
+if ( ! function_exists( 'cp_aside_entry_meta' ) ) :
+	function cp_aside_entry_meta() {
+		cp_aside_entry_taxonomies();
+		cp_entry_date();
+	}
+
+endif;
+
+
+if ( ! function_exists( 'cp_aside_entry_taxonomies' ) ) :
+
+	function cp_aside_entry_taxonomies() {
+		$meta_box_location_value = get_post_meta( get_the_ID(), 'meta-box-location', TRUE );
+		
+		//$post_meta_value = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'cp' ) );
+		if ( $meta_box_location_value ) {
+			printf(
+				'<span class="aside-location"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+				_x( 'Location', 'Used before location names.', 'cp' ),
+				$meta_box_location_value
+			);
+		}
+		
+		$meta_box_weather_value = get_post_meta( get_the_ID(), 'meta-box-weather', TRUE );
+		
+		//$post_meta_value = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'cp' ) );
+		if ( $meta_box_weather_value ) {
+			printf(
+				'<span class="aside-weather"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+				_x( 'Weather', 'Used before Weather names.', 'cp' ),
+				$meta_box_weather_value
+			);
+		}
+		
+		$meta_box_mood_value = get_post_meta( get_the_ID(), 'meta-box-mood', TRUE );
+		
+		//$post_meta_value = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'cp' ) );
+		if ( $meta_box_mood_value ) {
+			printf(
+				'<span class="aside-mood"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+				_x( 'Mood', 'Used before mood names.', 'cp' ),
+				$meta_box_mood_value
+			);
+		}
+		
+		
+		
+		
+
+
+	}
+endif;
+
+
+
+
+
+
 if ( ! function_exists( 'cp_entry_meta' ) ) :
 	function cp_entry_meta() {
-		if ( 'post' === get_post_type() ) {
+		if('aside' === get_post_format()) {
+			cp_aside_entry_meta(); //Special entry meta for aside posts. Show weather. Location. Mood......
+			return;
+		}
+		
+		else if ( 'post' === get_post_type() ) {
 			printf(
 				'<span class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
 				_x( 'Author', 'Used before post author name.', 'cp' ),
@@ -286,6 +349,58 @@ function cp_the_posts_pagination() {
  
 }
 
+function cp_comment_form(){
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+	$args =  array(
+		  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'cp' ) .
+			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder =  "'. __('Write down your thoughts here!','cp') . '" >' .
+			'</textarea></p>',
+		  'fields' => array(
+			  'author' =>
+				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'cp' ) .
+				( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+				'" size="30"' . $aria_req . ' placeholder =  "'. __('Name *','cp') . '"/></p>',
+
+			  'email' =>
+				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'cp' ) .
+				( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+				'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+				'" size="30"' . $aria_req . ' placeholder =  "'. __('Email *','cp') . '"/></p>',
+
+			  'url' =>
+				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'cp' ) . '</label>' .
+				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				'" size="30" placeholder =  "'. __('Your website','cp') . '"/></p>',
+		  ),
+	); 
+	comment_form($args);
+}
+
+function cp_toggle() {
+	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+		the_custom_logo();
+		?>
+		<style type="text/css">
+			#toggle::before {
+				display: none;
+			}
+		</style>
+		<?php
+	}
+	else {
+		?>
+		<style type="text/css">
+			#toggle {
+				margin-top: -10px;
+			}
+		</style>
+		<?php
+	}
+}
+
 
 function cp_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
@@ -305,21 +420,21 @@ function cp_comment($comment, $args, $depth) {
             if ( $args['avatar_size'] != 0 ) {
                 echo get_avatar( $comment, $args['avatar_size'] ); 
             } 
-            printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+            printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'cp' ), get_comment_author_link() ); ?>
         </div><?php 
         if ( $comment->comment_approved == '0' ) { ?>
-            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php 
+            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','cp' ); ?></em><br/><?php 
         } ?>
         <div class="comment-meta commentmetadata">
             <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
                 /* translators: 1: date, 2: time */
                 printf( 
-                    __('%1$s at %2$s'), 
+                    __('%1$s at %2$s', 'cp'), 
                     get_comment_date(),  
                     get_comment_time() 
                 ); ?>
             </a><?php 
-            edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+            edit_comment_link( __( '(Edit)', 'cp' ), '  ', '' ); ?>
         </div>
 		
 		</div>
@@ -344,32 +459,4 @@ function cp_comment($comment, $args, $depth) {
     if ( 'div' != $args['style'] ) : ?>
         </div><?php 
     endif;
-}
-
-
-function cp_comment_form(){
-	$args =  array(
-		  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'noun' ) .
-			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder =  "'. __('Write down your thoughts here!','cp') . '" >' .
-			'</textarea></p>',
-		  'fields' => array(
-			  'author' =>
-				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'cp' ) .
-				( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-				'" size="30"' . $aria_req . ' placeholder =  "'. __('Name *','cp') . '"/></p>',
-
-			  'email' =>
-				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'cp' ) .
-				( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-				'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-				'" size="30"' . $aria_req . ' placeholder =  "'. __('Email *','cp') . '"/></p>',
-
-			  'url' =>
-				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'cp' ) . '</label>' .
-				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-				'" size="30" placeholder =  "'. __('Your website','cp') . '"/></p>',
-		  ),
-	); 
-	comment_form($args);
 }

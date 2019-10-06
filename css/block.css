@@ -21,10 +21,10 @@ hr.wp-block-separator {
 }
 
 .wp-block-quote {
-	border-left: 4px solid #000;
 	margin: 0 0;
 	padding-left: 1em;
 	padding-bottom: 35px;
+	clear:both;
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
@@ -33,7 +33,6 @@ hr.wp-block-separator {
 
 
 .wp-block-calendar tfoot a {
-    color: #4b8d8e;
 }
 
 
@@ -504,8 +503,44 @@ hr.wp-block-separator {
 	background-color: #ffef8e;
 }
 
+.wp-block-quote {
+	margin: 0 0;
+	padding-left: 1em;
+	padding-bottom: 35px;
+	clear:both;
+}
+
+.wp-block-calendar table th {
+	border: none;
+}
+
+.wp-block-calendar,
+.wp-block-quote,
+.wp-block-gallery,
+.wp-block-cover{
+	margin: 0 0 1.6em;
+}
 
 
 
+.wp-block-image.alignwide {
+	width:100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
 
+.wp-block-image.alignfull {
+	width: 100vw;
+	margin-left: -35px;
+	overflow: hidden;
+	clear: both;
+}
 
+.wp-block-image.alignfull img{
+    min-width: 100%;
+    height: auto;
+    width: 100%;
+	float: left;
+	clear: both;
+	vertical-align: middle;
+}

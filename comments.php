@@ -31,14 +31,13 @@ if ( post_password_required() ) {
 				);
 				
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
 		<?php the_comments_navigation(); ?>
 
-	<?php endif; // Check for have_comments(). ?>
+	<?php endif; ?>
 
 	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 	<p class="no-comments"><?php _e( 'Comments are closed.', 'cp' ); ?></p>
@@ -48,4 +47,4 @@ if ( post_password_required() ) {
 		cp_comment_form();
 		?>
 
-</div><!-- .comments-area -->
+</div>

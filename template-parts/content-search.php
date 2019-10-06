@@ -9,7 +9,7 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header>
 	
-	
+	<div class="entry-content">
 	<?php if (strpos( get_the_content(), 'more-link' ) === false) :
 		cp_excerpt();
 		else:
@@ -52,4 +52,5 @@
 		?>
 
 	<?php endif; ?>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

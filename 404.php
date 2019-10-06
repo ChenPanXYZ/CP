@@ -7,18 +7,18 @@ get_header(); ?>
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h2 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cp' ); ?></h2>
-				</header><!-- .page-header -->
+				</header>
 
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'cp' ); ?></p>
 
 					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</div>
+			</section>
 
-		</main><!-- .site-main -->
+		</main>
 
-	</div><!-- .content-area -->
+	</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

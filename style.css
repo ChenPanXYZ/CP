@@ -1,13 +1,13 @@
 /*
 Theme Name: CP
-Theme URI: https://github.com/ChenPanXYZ/CP
+Theme URI: https://www.panchen.xyz/cp/
 Author: Pan Chen
 Author URI: https://www.panchen.xyz
 Description: CP is a beautiful, clean, and highly-customizable WordPress theme for different types of blogs.
-Version: 0.7
+Version: 0.89
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: Fixed header, pop-out panel, dynamic description, customizable.
+Tags: blog, Portfolio, custom-background, custom-colors, custom-header, editor-style, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, one-column, right-sidebar
 Text Domain: cp
 
 */
@@ -36,6 +36,7 @@ Text Domain: cp
  */
 
 /*Chapter 1 Nomalize*/
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto+Slab&display=swap');
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -44,9 +45,6 @@ html {
 
 body {
 	margin: 0;
-	background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
-	background-size: 100% calc(100% - 100vh + 129px);
-	background-repeat: no-repeat;
 }
 
 article,
@@ -174,7 +172,7 @@ textarea {
 
 textarea {
 	width: 100%;
-	font-family: 'Noto Sans TC', sans-serif;
+	font-family: 'Roboto Slab', serif;
 }
 
 button,
@@ -283,8 +281,18 @@ input[name="sub"]:checked:before,
 .byline:before,
 .next:before,
 .prev:before,
-.bypostauthor > .comment-body .fn:after {
+.bypostauthor > .comment-body .fn:after,
+.aside-location::before,
+.aside-weather::before,
+.aside-mood::before,
+#toggle::before
+{
 	font-family: "icomoon";
+}
+
+#toggle::before {
+	content: "\e9bd";
+	font-size: 32px;
 }
 
 .more-link:before {
@@ -338,10 +346,12 @@ input[name="sub"]:checked:before,
 	content:"\e930";
 	margin-right: 3px;
 }
+
 .tags-links:before{
 	content:"\e935";
 	margin-right: 3px;
 }
+
 .comments-link:before {
 	content:"\e96b";
 	margin-right: 3px;
@@ -352,9 +362,35 @@ input[name="sub"]:checked:before,
 	margin-right: 3px;
 }
 
+.aside-location:before{
+	content:"\e948";
+	margin-right: 3px;
+}
+
+.aside-weather:before{
+	content:"\e9d4";
+	margin-right: 3px;
+}
+
+.aside-mood:before{
+	content:"\e978";
+	margin-right: 3px;
+}
+
 .search-submit:before {
 	content: "\e986";
 	font-size: 15px;
+}
+
+.comment-reply-link {
+	display: inline-block;
+}
+
+.comment-reply-link:hover,
+.comment-reply-link:focus {
+	border-color: currentColor;
+	color: #007acc;
+	outline: 0;
 }
 
 
@@ -368,7 +404,7 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-family: 'Roboto Slab', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: 400;
@@ -412,36 +448,17 @@ i {
 	font-style: italic;
 }
 
-blockquote{
-	font-size: 1.2em;
-	margin:25px auto;
-	font-style:italic;
-	color: #555555;
-	padding:1.2em 30px 1.2em 75px;
-	border-left:8px solid #78C0A8 ;
-	line-height:1.6;
-	position: relative;
-	background:#EDEDED;
+blockquote {
+	margin: 0 0 1.6em;
 	text-align: center;
-}
-
-blockquote::before{
-	font-family:Arial;
-	content: "\201C";
-	color:#1f1f1f;
-	font-size:3em;
-	position: absolute;
-	left: 10px;
-	top: -10px;
-}
-
-blockquote > cite {
-	float: right;
-}
-
-blockquote > cite:before {
-	content: "\2015";
-	margin-right: 7px;
+	padding: 20px;
+	font-size: 20px;
+	border-left: 4px solid #428bca;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-right: 4px solid #428bca;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 address {
@@ -581,12 +598,6 @@ video {
 	vertical-align: middle;
 }
 
-ul, 
-ol, 
-dl {
-	list-style-type: square;
-}
-
 li {
   font-size: 16px;
 }
@@ -598,7 +609,6 @@ li a:hover {
 button {
 	border: none;
 	background: #555555;
-	color: #ffffff !important;
 	font-weight: 100;
 	padding: 9px;
     padding-left: 10px;
@@ -625,7 +635,6 @@ input[type="submit"] {
 	padding: 12px;
 	padding-left:20px;
 	padding-right: 20px;
-	text-transform: uppercase;
 	border-radius: 6px;
 	display: inline-block;
 }
@@ -738,10 +747,6 @@ Chapter 7 Widgets and other components that are used in multiple places.
 
 input[type="search"],
 textarea {
-	background: #f7f7f7;
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-	border: 1px solid #d1d1d1;
-	border-radius: 2px;
 	color: #686868;
 	padding: 0.625em 0.4375em;
 	width: 100%;
@@ -788,11 +793,12 @@ input[type="search"].search-field {
 
 .search-form {
 	display: block;
-	font-family: "Noto Sans SC", sans-serif;
+	font-family: 'Roboto Slab', serif;
 	font-size: 16px;
 	height: 50px;
 	line-height: 28px;
-	margin-top: 0px;
+	margin-top: 1.6em;
+	margin-bottom: 1.6em;
 	position: relative;
 }
 
@@ -829,63 +835,150 @@ input[type="search"].search-field {
 7.2 Calendar
 */
 
-.widget_calendar {
-	text-align: center;
-}
-
-.widget_calendar {
-	float: left;width: 100%;
-}
-
 #wp-calendar {
-	width: 100%;
+	width:100%;
+	font-size:12px;
+	font-weight:300;
+	border-collapse:separate;
+	border-spacing:8px;
+	margin-left:-2px;
+	margin: 0 0 1.6em;
 }
 
 #wp-calendar caption {
-	text-align: center;
-	color: #333;
-	margin-top: 10px;
-	margin-bottom: 15px;
-}
-
-#wp-calendar thead th {
-	padding-bottom: 10px;
-}
-
-#wp-calendar tbody {
-	color: #aaa;
+	display:none;
 }
 
 #wp-calendar tbody td {
-	background: #f5f5f5;
-	border: 1px solid #fff;
-	text-align: center;
-	padding:8px;
+	margin-bottom:10px;
+	text-align:center;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-ms-border-radius:2px;
+	-o-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #f4f4f4;
+	padding:6px;
 }
 
 #wp-calendar tbody td:hover {
-	background: #fff;
+	border: none;
 }
 
-#wp-calendar tbody .pad {
-	background: none;
+#wp-calendar tbody td.pad {
+	border:0;
 }
 
-#wp-calendar tfoot #next {
-	text-transform: uppercase;
-	text-align: right;
+#wp-calendar tbody td#today {
+	color:#47C2DC;
+	border-color:#47C2DC;
 }
 
-#wp-calendar tfoot #prev {
-	text-transform: uppercase;
-	padding-top: 10px;
-	text-align: left;
+#wp-calendar tfoot td#prev a,#wp-calendar tfoot td#next a {
+	font-size:12px;
+	font-weight:400;
+	position:relative;
+	text-transform:uppercase;
+	bottom:-9px;
+	margin-bottom:1px;
+}
+
+#wp-calendar tfoot td#prev {
+	text-align:left;
+}
+
+#wp-calendar tfoot td#next {
+	text-align:right;
+}
+
+#wp-calendar thead th {
+	font-size:13px;
+	font-weight:400;
+	text-align:center;
+	padding-bottom:10px;
+}
+
+#wp-calendar tbody td a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover {
+	font-weight: bold;
+}
+
+
+/**
+7.3 Gallery
+*/
+
+.gallery-item {
+	display: inline-block;
+	max-width: 33.33%;
+	padding: 0 3px 3px;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	margin: 0 0px 3px;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+}
+
+.gallery-caption {
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
 }
 
 
 /**
 Chapter 8 Comments
 */
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	margin-bottom: 1em;
+}
 
 .says, .screen-reader-text {
 	position: absolute !important;
@@ -927,7 +1020,6 @@ ol.commentlist li.comment:last-child {
 }
 
 ol.commentlist li.comment div.vcard {
-	font:normal 16px georgia,times,serif; 
 }
 
 ol.commentlist li.comment div.vcard cite.fn {
@@ -940,10 +1032,6 @@ ol.commentlist li.comment div.vcard img.avatar {
 	height: 36px;
 	vertical-align:middle;
 	border: 1px solid #ddd;
-}
-
-ol.commentlist li.comment div.comment-meta a {
-	color:#686868; 
 }
 
 ol.commentlist li.comment ul {
@@ -1011,7 +1099,6 @@ ol.commentlist li.comment ul.children {
 
 .comment-form input[id = "author"], .comment-form input[id = "email"], .comment-form input[id = "url"] {
 	width: 100%;
-	border: 1px solid #d1d1d1;
 	padding-left: 5px;
 }
 
@@ -1026,7 +1113,7 @@ Chapter 9 Main Content
 */
 
 .site-inner {
-	max-width: 1320px;
+	max-width: 1960px;
 	margin: 0 auto;
 }
 
@@ -1048,8 +1135,8 @@ Chapter 9 Main Content
 
 #main-header {
 	height: inherit;
-	width: 80%;
-	max-width: 1320px;
+	width: 100%;
+	max-width: 1960px;
 }
 
 .read-progress-bar {
@@ -1062,9 +1149,10 @@ Chapter 9 Main Content
 }
 
 .fixed-at-top {
-	position:fixed; 
+	position: fixed; 
 	z-index: 9999;
 	background-color: #ffffff;
+	left: 0;
 }
 
 
@@ -1089,6 +1177,7 @@ Chapter 9 Main Content
 
 .site-title{
 	display: inline-block;
+	font-family: 'Lora', serif;
 	margin-top: 0.225em;
 	margin-bottom: 4px;
 	font-size: 18px;
@@ -1129,11 +1218,12 @@ p.site-description {
 	margin-right: 15px;
 }
 
-.site-header-menu img {
+#toggle img {
 	max-width: 32px;
 	height: auto;
 	vertical-align: middle;
 	border: 0;
+	border-radius: 100%;
 }
 
 
@@ -1301,7 +1391,8 @@ p.site-description {
 */
 
 .popout-panel {
-	display: none;
+	visibility: hidden;
+	display: block;
 	position: fixed;
 	width: 100%;
 	background: #000000;
@@ -1355,8 +1446,8 @@ p.site-description {
 */
 
 .hentry {
-	border-top: 2px solid #efefef;
-	border-bottom: 2px solid #efefef;
+	border-top: 2px solid #686868;
+	border-bottom: 2px solid #686868;
 	padding: 2em 0;
 }
 
@@ -1447,21 +1538,18 @@ p.site-description {
 
 .entry-content ol,
 .entry-content ul {
-	margin: 2px;
+	margin: 0 0 1.6em;
 }
 
 article ul a {
 	color: #686868;
-	border-bottom: 2.5px solid #4b8d8e;
 }
 
 
 article ul strong {
-	border-bottom: 2.5px solid #4b8d8e;
 }
 
 article ul em {
-	border-bottom: 2.5px solid #4b8d8e;
 }
 
 
@@ -1511,7 +1599,7 @@ article ul em {
 
 .nav-links {
 	text-align: center;
-	
+	margin-top: 15px;
 }
 
 .page-numbers {
@@ -1627,11 +1715,27 @@ We will use "*" to denote this kind of devices.
 	/*
 	*.7.1 Search
 	*/
+
+	
+	/**
+	Chapter *.8 Comments
+	*/
+	
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		display: inline-block;
+		width: 33%;
+	}
 	
 	
 	/**
 	Chapter *.9	Main Content
 	*/
+	
+	.site-inner {
+		padding: 0 20px;
+	}
 	
 	.read-progress-bar {
 		top: 60px;
@@ -1652,7 +1756,11 @@ We will use "*" to denote this kind of devices.
 	
 	#main-header {
 		height: inherit;
-		max-width: 1320px;
+		max-width: 1960px;
+	}
+	
+	.fixed-at-top {
+		padding: 0 20px;
 	}
 
 
@@ -1686,7 +1794,7 @@ We will use "*" to denote this kind of devices.
 	9.1.1.2 site-header > main-header > site-header-menu
 	*/
 	
-	.site-header-menu img {
+	#toggle img {
 		max-width: 2em;
 	}
 
@@ -1872,20 +1980,183 @@ We will use "*" to denote this kind of devices.
 		margin: 0 auto 1.75em;
 	}
 	
+	.credit a{
+		color: #686868;
+	}
+}
+
+.the_day .aside-location,
+.the_day .aside-weather,
+.the_day .aside-mood {
+	margin-right: 10px;
+}
+
+
+.aside-archive-year {
+	font-size: 2em;
+} 
+
+.aside-archive-month {
+	font-size: 1.5em;
+}
+
+.aside-archive-day {
+	font-size: 1em;
+}
+
+.aside-archive-container {
+	padding-left: 20px;
+	border: 1px dotted;
+	margin-bottom: 10px;
+}
+
+.wp-caption {
 	
 }
 
-.credit a{
-	color: #686868;
+.wp-caption-text {
+	
 }
 
+/** 
+ Default Color Scheme
+*/
 
-#wpadminbar {
-	position: fixed;
+/**
+ Primary Color
+*/
+.sticky-post,
+.site-title,
+.site-title a,
+.site-brand .site-title a,
+.entry-title,
+.entry-title a,
+.entry-content,
+.widget-title,
+.textwidget,
+.byline::before,
+.posted-on::before,
+.cat-links::before,
+.tags-links::before,
+.comments-link::before,
+.edit-link::before,
+.recentcomments,
+.breadcrumbs-item,
+.comment-content,
+article,
+p,
+.page-title,
+.current,
+.entry-summary,
+cite,
+li,
+button,
+.popout-panel,
+.nav-menu li a,
+#wp-calendar tbody td#today,
+#wp-calendar thead th,
+#wp-calendar tbody td a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover,
+.aside-location::before,
+.aside-weather::before,
+.aside-mood::before
+{ 
+	color: #004f2a; 
+}
+#wp-calendar tbody td#today,
+#wp-calendar tbody td a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover{
+	border-color: #004f2a; 
 }
 
+.wp-block-table, .wp-block-table th, .wp-block-table td {
+	border-color: #004f2a; 
+}
 
+/**
+  Secondary Color
+*/
+.site-description,
+.social-navigation a,
+.entry-footer a,
+.comment-meta a,
+.credit a,
+article ul a,
+#wp-calendar tbody td,
+.wp-block-quote cite,
+.aside-location,
+.aside-weather,
+.aside-mood,
+#toggle::before
+{ 
+	color: #6d5900; 
+}
+.hentry {
+	border-top-color: #6d5900; 
+	border-bottom-color: #6d5900;
+}
+#wp-calendar tbody td, 
+.aside-archive-container{
+	border-color: #6d5900; 
+}
+.wp-block-quote {
+	border-left-color: #6d5900; 
+}
+.wp-block-quote {
+	border-right-color: #6d5900; 
+}
 
+/**
+  Link Color
+*/
+a,
+.wp-block-calendar tfoot a
+{ 
+	color: #b55117; 
+}
+.read-progress-bar {
+	background-color: #b55117; 
+}
+.sticky-post,
+article ul a,
+article ul em {
+	border-bottom-color: #b55117; 
+}
 
+/**
+  Background Color
+*/
+body,
+.fixed-at-top,
+#main-header,
+.wp-block-calendar table th
+{ 
+	background: #d1d1d1;
+}
 
+/**
+  Popout Panel Color
+*/
+.popout-panel
+{ 
+	background-color: #aaaaaa; 
+}
 
+/**
+  Selection Color
+*/
+::selection
+{ 
+background: #DEB887; 
+}
+::-moz-selection
+{ 
+background: #DEB887; 
+}
+
+.breadcrumbs {
+	display: block;
+	font-size: 12px;
+}
+
+textarea, input {
+	border: solid;
+}

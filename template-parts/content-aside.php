@@ -3,7 +3,7 @@
  * The template part for displaying aside posts
  */
 ?>
-
+<div class = "article-wrapper">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 	<div class="read-progress-bar"></div>
@@ -51,3 +51,4 @@
 			?>
 	</footer>
 </article>
+</div>

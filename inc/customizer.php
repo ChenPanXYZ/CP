@@ -110,7 +110,7 @@ function cd_customizer_settings( $wp_customize ) {
 	
 	// Layout Options
 	$wp_customize->add_setting( 'change_layout' , array(
-		'default'     => 'one_column',
+		'default'     => 'full_width',
 		'sanitize_callback' => 'theme_slug_sanitize_radio',
 		'transport'   => 'refresh',
 	) );
@@ -123,6 +123,23 @@ function cd_customizer_settings( $wp_customize ) {
 	'choices' => array(
 	'full_width' => __('Full Width', 'cp'),
 	'one_column' => __('One Column', 'cp'),
+	),
+	) );
+	
+	$wp_customize->add_setting( 'change_homepage_layout' , array(
+		'default'     => 'masonry',
+		'sanitize_callback' => 'theme_slug_sanitize_radio',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'change_homepage_layout', array(
+	'label' => __('Change Homepage Layout', 'cp'),
+	'section' => 'cp_layout',
+	'settings' => 'change_homepage_layout',
+	'type' => 'radio',
+	'choices' => array(
+	'masonry' => __('Masonry', 'cp'),
+	'classical' => __('Classical', 'cp'),
 	),
 	) );
 	
@@ -494,26 +511,73 @@ function cp_custom_layout_css()
 }
 
 
+add_action( 'wp_head', 'cp_custom_homepage_layout_css');
+function cp_custom_homepage_layout_css()
+{
+    ?>
+	<?php if( get_theme_mod( 'change_homepage_layout') == 'masonry' ) : ?>
+		<?php if( get_theme_mod( 'change_layout') == 'one_column' ) : ?>
+			<style type="text/css">
+				@media screen and (min-width: 61.5625em) {
+					.homepage-content .article-wrapper {
+						width: calc((100% - 60px)/2);
+					}
+				}
+			</style>
+		<?php elseif( get_theme_mod( 'change_layout') == 'full_width' ) : ?>
+			<style type="text/css">
+				@media screen and (min-width: 61.5625em) {
+					.homepage-content .article-wrapper {
+						width: calc((100% - 90px)/3);
+					}
+				}
+			</style>
+		<?php endif ?>
+         <style type="text/css">
+		 @media screen and (min-width: 61.5625em) {
+			.homepage-content .article-wrapper {
+				overflow-y: auto;
+				max-height: 600px;
+				margin-right: 15px;
+				margin: 15px;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				border-radius: 5px;
+			}
+
+			.homepage-content {
+				 width: 100% !important;
+				 margin-top: 64px;
+			}
+
+			.homepage-content .hentry {
+				border: none;
+			}
+
+			.homepage-content article{
+				margin: 0 15px;
+			}
+		 }
+         </style>
+	<?php endif ?>
+    <?php
+}
+
+
 add_action( 'wp_head', 'cp_change_header');
 function cp_change_header()
 {
     ?>
 	<?php if( get_theme_mod( 'change_header') == 'regular_header' ) : ?>
          <style type="text/css">
-			 .fixed-at-top {
-				 position: relative;
+			 .popout-panel {
+				 top: 46px;
 			 }
-			 
-			 
 			 @media screen and (min-width: 61.5625em) {
-				 .fixed-at-top {
-				 	position: relative;
-			 	}
-				 .read-progress-bar {
-					 display: none;
-				 }
+			 .popout-panel {
+				 top: 65px;
+			 } 
 			 }
-			 
          </style>
 	<?php endif ?>
     <?php

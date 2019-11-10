@@ -19,7 +19,7 @@
 				</div>
 		
 				<p class= "credit">
-					<?php printf( __( '<a href="https://www.panchen.xyz/cp/" rel="designer">CP is developed by Pan Chen</a>', 'cp' )); ?>
+					<?php printf( __( '<a href="https://www.chensnotes.com/cp/" rel="designer">CP is developed by Pan Chen</a>', 'cp' )); ?>
 					<span class="credit-sep"> | </span>
 					<?php printf( __( '<a href="https://wordpress.org">Proudly powered by WordPress</a>', 'cp' )); ?>
 				</p>

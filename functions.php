@@ -70,6 +70,11 @@ function cp_scripts() {
 	
 	wp_enqueue_style( 'block-css', get_template_directory_uri() . '/css/block.css');
 	
+	if (get_theme_mod( 'change_homepage_layout') == 'masonry'):
+		wp_enqueue_script('masonry');
+		wp_enqueue_script( 'masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array(), false, true );
+	endif;
+	
 	wp_enqueue_script( 'toggle-menu', get_template_directory_uri() . '/js/function.js', array('jquery'), '0.5', true );
 	
 	wp_enqueue_script( 'cp-slidepanel', get_template_directory_uri() . '/js/slidepanel.js', array('jquery'), '0.5', true );
@@ -85,13 +90,12 @@ add_action( 'wp_enqueue_scripts', 'cp_scripts' );
 
 function sticky_header() {
 //Functionize sticky header
-	//if (get_theme_mod( 'change_header', 'regular_header' ) != 'regular_header')
-	//{
-	wp_enqueue_script( 'myscript', get_stylesheet_directory_uri() . '/js/sticky-header.js');
-	if(is_singular()){
-		wp_enqueue_script('read-progress-bar', get_template_directory_uri() .'/js/read-progress-bar.js', array('jquery'), '0.5', true );
-	}
-	//}
+	if (get_theme_mod( 'change_header') != 'regular_header'):
+		wp_enqueue_script( 'myscript', get_stylesheet_directory_uri() . '/js/sticky-header.js');
+		if(is_singular()){
+			wp_enqueue_script('read-progress-bar', get_template_directory_uri() .'/js/read-progress-bar.js', array('jquery'), '0.5', true );
+		}
+	endif;
 }
 add_action('wp_head','sticky_header');
 
@@ -381,4 +385,100 @@ function cp_sidebar_body_class( $classes )
 {
     $classes[] = (is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3')) ? 'has-sidebar' : 'no-sidebar';
     return $classes;
+}
+
+
+
+
+
+
+if ( ! function_exists( 'nimbo_show_post_recent_comments' ) ) {
+	function nimbo_show_post_recent_comments( $show_avatar ) {
+		// recent comments: show or hide
+		$show_recent_comments = 1;
+		if ( $show_recent_comments ) {
+			// comments number (maximum value)
+			$recent_comments_number = 3;
+			// arguments
+			$recent_comments_args = array(
+				'post_id'		=> get_the_ID(),
+				'post_type'		=> 'post',
+				'status'		=> 'approve',
+				'orderby'		=> 'comment_date_gmt',
+				'order'			=> 'DESC',
+				'number'		=> (int) $recent_comments_number,
+				'type'			=> 'comment',
+				'hierarchical'	=> 'threaded',
+			);
+			// get and show comments
+			if ( $recent_comments = get_comments( $recent_comments_args ) ) {
+				// comment content: number of words (maximum value)
+				$comment_words_number = get_theme_mod( 'nimbo_comment_words_number', 8 );
+				?>
+
+				<!-- recent comments -->
+				<div class="bwp-post-comments">
+
+					<h4 class="bwp-post-comments-title">
+						<i class="fas fa-comment fa-fw"></i><?php esc_html_e( 'Recent comments', 'nimbo' ); ?>
+					</h4>
+
+					<ul class="bwp-post-comments-list list-unstyled clearfix">
+
+						<?php
+						foreach ( $recent_comments as $comment ) {
+							// current comment data: id, author email, author name, and comment content (trimmed)
+							$current_comment_id = $comment->comment_ID;
+							$current_comment_author_email = $comment->comment_author_email;
+							$current_comment_author_name = $comment->comment_author;
+							$current_comment_content = wp_trim_words( $comment->comment_content, (int) $comment_words_number );
+							?>
+
+							<!-- comment -->
+							<li>
+								<?php if ( $show_avatar ) { ?>
+									<figure class="bwp-post-comment-author-avatar">
+										<?php echo get_avatar( $current_comment_author_email, '72', '', esc_attr( $current_comment_author_name ) ); ?>
+									</figure>
+								<?php } ?>
+								<div class="bwp-post-comment-content">
+									<span class="bwp-post-comment-author"><?php echo esc_html( $current_comment_author_name ); ?></span>
+									<div class="bwp-post-comment-excerpt">
+										<a href="<?php the_permalink(); ?>#comment-<?php echo (int) $current_comment_id; ?>">
+											<?php echo esc_html( $current_comment_content ); ?>
+										</a>
+									</div>
+								</div>
+							</li>
+							<!-- end: comment -->
+
+							<?php
+						} // end: foreach
+						?>
+
+					</ul>
+
+					<?php
+					if ( comments_open() ) {
+						?>
+						<a href="<?php the_permalink(); ?>#respond" class="bwp-post-add-comment-link">
+							<i class="fas fa-plus fa-fw"></i><?php esc_html_e( 'Add a comment...', 'nimbo' ); ?>
+						</a>
+						<?php
+					} elseif ( get_comments_number() ) {
+						?>
+						<a href="<?php the_permalink(); ?>#comments" class="bwp-post-add-comment-link bwp-post-comments-closed">
+							<i class="fas fa-comment-slash fa-fw"></i><?php esc_html_e( 'Comments are closed.', 'nimbo' ); ?>
+						</a>
+						<?php
+					}
+					?>
+
+				</div>
+				<!-- end: recent comments -->
+
+				<?php
+			}
+		}
+	}
 }

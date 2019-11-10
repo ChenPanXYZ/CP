@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: content.php conversion\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04 15:55-0500\n"
-"PO-Revision-Date: 2019-11-04 15:56-0500\n"
+"PO-Revision-Date: 2019-11-04 15:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: Unknown\n"
 "Language: zh_CN\n"
@@ -17,44 +17,44 @@ msgstr ""
 
 #: 404.php:9
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "哎呀！找不到该页面。"
+msgstr "哎呀！找不到該頁面。"
 
 #: 404.php:13
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "看来在这个地方什么都没找到。也许试试搜索？"
+msgstr "看來在這個地方什麼都沒找到。也許試試搜索？"
 
 #: archive.php:26 index.php:21 search.php:28
 msgid "Previous page"
-msgstr "上一页"
+msgstr "上一頁"
 
 #: archive.php:27 index.php:22 search.php:29
 msgid "Next page"
-msgstr "下一页"
+msgstr "下一頁"
 
 #: archive.php:28 index.php:23 search.php:30
 #: template-parts/content-aside.php:32 template-parts/content-page.php:18
 #: template-parts/content-single.php:27 template-parts/content.php:33
 msgid "Page"
-msgstr "页面"
+msgstr "頁面"
 
 #: comments.php:15
 msgid "1 Comment"
-msgstr "一个评论"
+msgstr "一個評論"
 
 #: comments.php:15
 msgid "% Comments"
-msgstr "%则评论"
+msgstr "%則評論"
 
 #: comments.php:43
 msgid "Comments are closed."
-msgstr "评论已关闭。"
+msgstr "評論已關閉。"
 
 #: footer.php:22
 msgid ""
 "<a href=\"https://www.chensnotes.com/cp/\" rel=\"designer\">CP is developed "
 "by Pan Chen</a>"
 msgstr ""
-"<a href=\"https://www.chensnotes.com/cp/\" rel=\"designer\">CP由陈攀开发</a>"
+"<a href=\"https://www.chensnotes.com/cp/\" rel=\"designer\">CP由陳攀開發</a>"
 
 #: footer.php:24
 msgid "<a href=\"https://wordpress.org\">Proudly powered by WordPress</a>"
@@ -62,67 +62,67 @@ msgstr "<a href=\"https://wordpress.org\">自豪地使用WordPress</a>"
 
 #: functions.php:49
 msgid "Primary Menu"
-msgstr "主菜单"
+msgstr "主菜單"
 
 #: functions.php:50
 msgid "Social Links Menu"
-msgstr "社交链接菜单"
+msgstr "社交連結功能表"
 
 #: functions.php:144
 msgid "Left Widget Area in the Popout Panel"
-msgstr "弹出面板的左边小工具栏区域"
+msgstr "彈出面板的左邊小工具列區域"
 
 #: functions.php:146
 msgid "The left widget area in the popout panel."
-msgstr "弹出面板的左边小工具栏区域。"
+msgstr "彈出面板的左邊小工具列區域。"
 
 #: functions.php:156
 msgid "Middle Widget Area in the Popout Panel"
-msgstr "弹出面板的中间小工具栏区域"
+msgstr "彈出面板的中間小工具列區域"
 
 #: functions.php:158
 msgid "The middle widget area in the popout panel."
-msgstr "弹出面板的中间小工具栏区域。"
+msgstr "彈出面板的中間小工具列區域。"
 
 #: functions.php:168
 msgid "Right Widget Area in the Popout Panel"
-msgstr "弹出面板的右边小工具栏区域"
+msgstr "彈出面板的右邊小工具列區域"
 
 #: functions.php:170
 msgid "The right widget area in the popout panel."
-msgstr "弹出面板的右边小工具栏区域。"
+msgstr "彈出面板的右邊小工具列區域。"
 
 #: functions.php:180
 msgid "Footer's Left Widget Area"
-msgstr "底部的左边工具栏区域"
+msgstr "底部的左邊工具列區域"
 
 #: functions.php:182
 msgid "The left widget area in the footer."
-msgstr "底部的左边工具栏区域。"
+msgstr "底部的左邊工具列區域。"
 
 #: functions.php:192
 msgid "Footer's Middle Widget Area"
-msgstr "底部的中间工具栏区域"
+msgstr "底部的中間工具列區域"
 
 #: functions.php:194
 msgid "The middle widget area in the footer."
-msgstr "底部的中间工具栏区域。"
+msgstr "底部的中間工具列區域。"
 
 #: functions.php:204
 msgid "Footer's Right Widget Area"
-msgstr "底部的右边工具栏区域"
+msgstr "底部的右邊工具列區域"
 
 #: functions.php:206
 msgid "The right widget area in the footer."
-msgstr "底部的右边工具栏区域。"
+msgstr "底部的右邊工具列區域。"
 
 #: functions.php:236
 msgid "Location"
-msgstr "地点"
+msgstr "地點"
 
 #: functions.php:241
 msgid "Weather"
-msgstr "天气"
+msgstr "天氣"
 
 #: functions.php:244
 msgid "Sunny"
@@ -130,11 +130,11 @@ msgstr "晴天"
 
 #: functions.php:244
 msgid "Cloudy"
-msgstr "多云"
+msgstr "多雲"
 
 #: functions.php:244
 msgid "Partly cloudy"
-msgstr "局部多云"
+msgstr "局部多雲"
 
 #: functions.php:244
 msgid "Rainy"
@@ -150,11 +150,11 @@ msgstr "雨雪"
 
 #: functions.php:244
 msgid "Stormy"
-msgstr "暴风雨"
+msgstr "暴風雨"
 
 #: functions.php:244
 msgid "Lightning"
-msgstr "闪电"
+msgstr "閃電"
 
 #: functions.php:244
 msgid "Thunder"
@@ -166,11 +166,11 @@ msgstr "冰雹"
 
 #: functions.php:244
 msgid "Windy"
-msgstr "多风"
+msgstr "多風"
 
 #: functions.php:244
 msgid "Foggy"
-msgstr "雾天"
+msgstr "霧天"
 
 #: functions.php:266
 msgid "Mood"
@@ -178,11 +178,11 @@ msgstr "心情"
 
 #: functions.php:269
 msgid "Happy"
-msgstr "高兴"
+msgstr "高興"
 
 #: functions.php:269
 msgid "Sad"
-msgstr "伤心"
+msgstr "傷心"
 
 #: functions.php:269
 msgid "Hypnotic"
@@ -198,7 +198,7 @@ msgstr "困惑"
 
 #: functions.php:269
 msgid "Doubtful"
-msgstr "疑虑"
+msgstr "疑慮"
 
 #: functions.php:269
 msgid "Cool"
@@ -206,7 +206,7 @@ msgstr "怡然自得"
 
 #: functions.php:269
 msgid "Angry"
-msgstr "生气"
+msgstr "生氣"
 
 #: functions.php:296
 msgid "Today"
@@ -214,64 +214,64 @@ msgstr "今日"
 
 #: header.php:12
 msgid "Skip to content"
-msgstr "跳至内容"
+msgstr "跳至內容"
 
 #: inc/customizer.php:11
 msgid "Colors"
-msgstr "颜色"
+msgstr "顏色"
 
 #: inc/customizer.php:23
 msgid "Primary Text Color"
-msgstr "主文字颜色"
+msgstr "主文字顏色"
 
 #: inc/customizer.php:35
 msgid "Secondary Text Color"
-msgstr "副文字颜色"
+msgstr "副文字顏色"
 
 #: inc/customizer.php:48
 msgid "Link Color"
-msgstr "链接颜色"
+msgstr "連結顏色"
 
 #: inc/customizer.php:61
 msgid "Background Color"
-msgstr "背景颜色"
+msgstr "背景顏色"
 
 #: inc/customizer.php:73
 msgid "Popout Panel Color"
-msgstr "弹出面板背景颜色"
+msgstr "彈出面板背景顏色"
 
 #: inc/customizer.php:85
 msgid "Selection Color"
-msgstr "选取范围的颜色"
+msgstr "選取範圍的顏色"
 
 #: inc/customizer.php:98
 msgid "Theme Color"
-msgstr "主题颜色"
+msgstr "主題顏色"
 
 #: inc/customizer.php:99
 msgid ""
 "Change the color in the address bar, supported by Google Chrome Android."
-msgstr "改变地址栏的颜色，谷歌Chrome安卓版支持此功能。"
+msgstr "改變位址欄的顏色，谷歌Chrome安卓版支援此功能。"
 
 #: inc/customizer.php:107
 msgid "Layout"
-msgstr "布局"
+msgstr "佈局"
 
 #: inc/customizer.php:119
 msgid "Change Layout"
-msgstr "改变布局方式"
+msgstr "改變佈局方式"
 
 #: inc/customizer.php:124
 msgid "Full Width"
-msgstr "全宽"
+msgstr "全寬"
 
 #: inc/customizer.php:125
 msgid "One Column"
-msgstr "单栏"
+msgstr "單欄"
 
 #: inc/customizer.php:136
 msgid "Change Homepage Layout"
-msgstr "改变首页布局方式"
+msgstr "改變首頁佈局方式"
 
 #: inc/customizer.php:141
 msgid "Masonry"
@@ -279,39 +279,39 @@ msgstr "瀑布流"
 
 #: inc/customizer.php:142
 msgid "Classical"
-msgstr "经典"
+msgstr "經典"
 
 #: inc/customizer.php:154
 msgid "Header sticky or not"
-msgstr "是否置顶头部"
+msgstr "是否置頂頭部"
 
 #: inc/customizer.php:159
 msgid "Sticky Header"
-msgstr "置顶头部"
+msgstr "置頂頭部"
 
 #: inc/customizer.php:160
 msgid "Regular Header"
-msgstr "普通的头部"
+msgstr "普通的頭部"
 
 #: inc/customizer.php:173
 msgid "Display breadcrumbs or not"
-msgstr "是否显示面包屑导航"
+msgstr "是否顯示麵包屑導航"
 
 #: inc/customizer.php:178 inc/customizer.php:202
 msgid "Display Breadcrumbs"
-msgstr "显示面包屑导航"
+msgstr "顯示麵包屑導航"
 
 #: inc/customizer.php:179 inc/customizer.php:203 inc/customizer.php:204
 msgid "Hide Breadcrumbs"
-msgstr "隐藏面包屑导航"
+msgstr "隱藏麵包屑導航"
 
 #: inc/customizer.php:186
 msgid "Fonts"
-msgstr "字体"
+msgstr "字體"
 
 #: inc/customizer.php:197
 msgid "Select a font for your website title"
-msgstr "为你的站点选取一个字体"
+msgstr "為你的網站選取一個字體"
 
 #: inc/customizer.php:210
 msgid "Others"
@@ -319,46 +319,46 @@ msgstr "其他"
 
 #: inc/customizer.php:223
 msgid "Show or Hide Author Meta"
-msgstr "显示或隐藏作者信息"
+msgstr "顯示或隱藏作者資訊"
 
 #: inc/customizer.php:224
 msgid "We remmend you hide author meta if the website has only one author."
-msgstr "如果你的网站只有一位作者的话，我们建议你隐藏作者信息。"
+msgstr "如果你的網站只有一位作者的話，我們建議你隱藏作者資訊。"
 
 #: inc/customizer.php:229 inc/customizer.php:247
 msgid "Display"
-msgstr "显示"
+msgstr "顯示"
 
 #: inc/customizer.php:230 inc/customizer.php:248
 msgid "Hide"
-msgstr "隐藏"
+msgstr "隱藏"
 
 #: inc/customizer.php:241
 msgid "Display Aside or not"
-msgstr "是否显示日志"
+msgstr "是否顯示日誌"
 
 #: inc/customizer.php:242
 msgid "Display posts of format aside in pages other than Aside Archive or not."
-msgstr "是否在日志归档以外的归档页面显示日志格式的文章。"
+msgstr "是否在日誌歸檔以外的歸檔頁面顯示日誌格式的文章。"
 
 #: inc/template-tags.php:120
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "<span class=\"screen-reader-text\">%s</span>发表评论"
+msgstr "<span class=\"screen-reader-text\">%s</span>發表評論"
 
 #: inc/template-tags.php:221 template-parts/content-aside.php:20
 #: template-parts/content-search.php:18 template-parts/content.php:22
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "继续阅读<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "繼續閱讀<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: inc/template-tags.php:357
 msgid "Comment"
-msgstr "评论"
+msgstr "評論"
 
 #: inc/template-tags.php:358
 msgid "Write down your thoughts here!"
-msgstr "在这里写下你的想法吧！"
+msgstr "在這裡寫下你的想法吧！"
 
 #: inc/template-tags.php:362
 msgid "Name"
@@ -370,28 +370,28 @@ msgstr "名字 *"
 
 #: inc/template-tags.php:368
 msgid "Email"
-msgstr "电子邮箱"
+msgstr "電子郵箱"
 
 #: inc/template-tags.php:371
 msgid "Email *"
-msgstr "电子邮箱 *"
+msgstr "電子郵箱 *"
 
 #: inc/template-tags.php:374
 msgid "Website"
-msgstr "网站"
+msgstr "網站"
 
 #: inc/template-tags.php:376
 msgid "Your website"
-msgstr "你的网站"
+msgstr "你的網站"
 
 #: inc/template-tags.php:423
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
-msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">说道：</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">說道：</span>"
 
 #: inc/template-tags.php:426
 msgid "Your comment is awaiting moderation."
-msgstr "你的评论正在等待审核。"
+msgstr "你的評論正在等待審核。"
 
 #: inc/template-tags.php:432
 #, php-format
@@ -400,12 +400,12 @@ msgstr "%1$s 在 %2$s"
 
 #: inc/template-tags.php:437
 msgid "(Edit)"
-msgstr "(编辑)"
+msgstr "(編輯)"
 
 #: search.php:15
 #, php-format
 msgid "Search Results for: %s"
-msgstr "关于%s的搜索结果"
+msgstr "關於%s的搜索結果"
 
 #: searchform.php:10
 msgid "Search &hellip;"
@@ -413,7 +413,7 @@ msgstr "搜索一下 &hellip;"
 
 #: single.php:27
 msgid "Next:"
-msgstr "下一页："
+msgstr "下一頁："
 
 #: single.php:28
 msgid "Next post:"
@@ -421,7 +421,7 @@ msgstr "下一篇文章："
 
 #: single.php:30
 msgid "Previous:"
-msgstr "上一页："
+msgstr "上一頁："
 
 #: single.php:31
 msgid "Previous post:"
@@ -430,41 +430,41 @@ msgstr "下一篇文章:"
 #: template-parts/content-aside.php:28 template-parts/content-page.php:14
 #: template-parts/content-single.php:23 template-parts/content.php:29
 msgid "Pages:"
-msgstr "页面："
+msgstr "頁面："
 
 #: template-parts/content-aside.php:45 template-parts/content-page.php:28
 #: template-parts/content-search.php:32 template-parts/content-search.php:46
 #: template-parts/content-single.php:40 template-parts/content.php:46
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "编辑<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "編輯<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content-none.php:9
 msgid "Nothing Found"
-msgstr "什么也没有找到"
+msgstr "什麼也沒有找到"
 
 #: template-parts/content-none.php:15
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "准备好发布你的第一篇文章了吗？<a href=\"%1$s\">点击这里开始吧！</a>."
+msgstr "準備好發佈你的第一篇文章了嗎？<a href=\"%1$s\">點擊這裡開始吧！</a>."
 
 #: template-parts/content-none.php:19
 msgid ""
 "Nothing matched your search terms. Please try again with some different "
 "keywords."
-msgstr "没有找到你要找的东西。用不同的关键词试试吧。"
+msgstr "沒有找到你要找的東西。用不同的關鍵字試試吧。"
 
 #: template-parts/content-none.php:24
 msgid "There is nothing. Perhaps searching can help!"
-msgstr "这里什么也没有。也许搜索可以帮助你！"
+msgstr "這裡什麼也沒有。也許搜索可以幫助你！"
 
 #: template-parts/content.php:10
 msgid "Featured"
-msgstr "推荐阅读"
+msgstr "推薦閱讀"
 
 #~ msgid "Panel's Left Widget Area"
-#~ msgstr "弹出面板左边工具栏区域"
+#~ msgstr "彈出面板左邊工具列區域"
 
 #~ msgid "Stick to the top of the blog"
-#~ msgstr "置顶"
+#~ msgstr "置頂"

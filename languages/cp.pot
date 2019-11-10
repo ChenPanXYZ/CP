@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: content.php conversion\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 17:53-0400\n"
+"POT-Creation-Date: 2019-11-04 15:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Unknown\n"
@@ -26,16 +26,16 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive.php:23 index.php:17 search.php:28
+#: archive.php:26 index.php:21 search.php:28
 msgid "Previous page"
 msgstr ""
 
-#: archive.php:24 index.php:18 search.php:29
+#: archive.php:27 index.php:22 search.php:29
 msgid "Next page"
 msgstr ""
 
-#: archive.php:25 index.php:19 search.php:30
-#: template-parts/content-aside.php:33 template-parts/content-page.php:18
+#: archive.php:28 index.php:23 search.php:30
+#: template-parts/content-aside.php:32 template-parts/content-page.php:18
 #: template-parts/content-single.php:27 template-parts/content.php:33
 msgid "Page"
 msgstr ""
@@ -53,162 +53,162 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:22
-msgid "<a href=\"https://blog.panchen.xyz/cp/\" rel=\"designer\">CP is developed by Pan Chen</a>"
+msgid "<a href=\"https://www.chensnotes.com/cp/\" rel=\"designer\">CP is developed by Pan Chen</a>"
 msgstr ""
 
 #: footer.php:24
 msgid "<a href=\"https://wordpress.org\">Proudly powered by WordPress</a>"
 msgstr ""
 
-#: functions.php:44
+#: functions.php:49
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:50
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:144
 msgid "Left Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:146
 msgid "The left widget area in the popout panel."
 msgstr ""
 
-#: functions.php:146
+#: functions.php:156
 msgid "Middle Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:158
 msgid "The middle widget area in the popout panel."
 msgstr ""
 
-#: functions.php:158
+#: functions.php:168
 msgid "Right Widget Area in the Popout Panel"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:170
 msgid "The right widget area in the popout panel."
 msgstr ""
 
-#: functions.php:170
+#: functions.php:180
 msgid "Footer's Left Widget Area"
 msgstr ""
 
-#: functions.php:172
+#: functions.php:182
 msgid "The left widget area in the footer."
 msgstr ""
 
-#: functions.php:182
+#: functions.php:192
 msgid "Footer's Middle Widget Area"
 msgstr ""
 
-#: functions.php:184
+#: functions.php:194
 msgid "The middle widget area in the footer."
 msgstr ""
 
-#: functions.php:194
+#: functions.php:204
 msgid "Footer's Right Widget Area"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:206
 msgid "The right widget area in the footer."
 msgstr ""
 
-#: functions.php:226
+#: functions.php:236
 msgid "Location"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:241
 msgid "Weather"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Sunny"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Cloudy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Partly cloudy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Rainy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Snowy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Sleeting"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Stormy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Lightning"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Thunder"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Hailing"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Windy"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:244
 msgid "Foggy"
 msgstr ""
 
-#: functions.php:256
+#: functions.php:266
 msgid "Mood"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Happy"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Sad"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Hypnotic"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Romantic"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Mysterious"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Doubtful"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Cool"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:269
 msgid "Angry"
 msgstr ""
 
-#: functions.php:286
+#: functions.php:296
 msgid "Today"
 msgstr ""
 
@@ -268,63 +268,75 @@ msgstr ""
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer.php:137
-msgid "Header sticky or not"
+#: inc/customizer.php:136
+msgid "Change Homepage Layout"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Masonry"
 msgstr ""
 
 #: inc/customizer.php:142
+msgid "Classical"
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "Header sticky or not"
+msgstr ""
+
+#: inc/customizer.php:159
 msgid "Sticky Header"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:160
 msgid "Regular Header"
 msgstr ""
 
-#: inc/customizer.php:156
+#: inc/customizer.php:173
 msgid "Display breadcrumbs or not"
 msgstr ""
 
-#: inc/customizer.php:161 inc/customizer.php:185
+#: inc/customizer.php:178 inc/customizer.php:202
 msgid "Display Breadcrumbs"
 msgstr ""
 
-#: inc/customizer.php:162 inc/customizer.php:186 inc/customizer.php:187
+#: inc/customizer.php:179 inc/customizer.php:203 inc/customizer.php:204
 msgid "Hide Breadcrumbs"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:186
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:180
+#: inc/customizer.php:197
 msgid "Select a font for your website title"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:210
 msgid "Others"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:223
 msgid "Show or Hide Author Meta"
 msgstr ""
 
-#: inc/customizer.php:207
+#: inc/customizer.php:224
 msgid "We remmend you hide author meta if the website has only one author."
 msgstr ""
 
-#: inc/customizer.php:212 inc/customizer.php:230
+#: inc/customizer.php:229 inc/customizer.php:247
 msgid "Display"
 msgstr ""
 
-#: inc/customizer.php:213 inc/customizer.php:231
+#: inc/customizer.php:230 inc/customizer.php:248
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:241
 msgid "Display Aside or not"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:242
 msgid "Display posts of format aside in pages other than Aside Archive or not."
 msgstr ""
 
@@ -333,60 +345,60 @@ msgstr ""
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:221 template-parts/content-aside.php:21
+#: inc/template-tags.php:221 template-parts/content-aside.php:20
 #: template-parts/content-search.php:18 template-parts/content.php:22
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
+#: inc/template-tags.php:357
+msgid "Comment"
+msgstr ""
+
+#: inc/template-tags.php:358
+msgid "Write down your thoughts here!"
+msgstr ""
+
+#: inc/template-tags.php:362
+msgid "Name"
+msgstr ""
+
+#: inc/template-tags.php:365
+msgid "Name *"
+msgstr ""
+
+#: inc/template-tags.php:368
+msgid "Email"
+msgstr ""
+
 #: inc/template-tags.php:371
+msgid "Email *"
+msgstr ""
+
+#: inc/template-tags.php:374
+msgid "Website"
+msgstr ""
+
+#: inc/template-tags.php:376
+msgid "Your website"
+msgstr ""
+
+#: inc/template-tags.php:423
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
 msgstr ""
 
-#: inc/template-tags.php:374
+#: inc/template-tags.php:426
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:380
+#: inc/template-tags.php:432
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:385
-msgid "(Edit)"
-msgstr ""
-
-#: inc/template-tags.php:418
-msgid "Comment"
-msgstr ""
-
-#: inc/template-tags.php:419
-msgid "Write down your thoughts here!"
-msgstr ""
-
-#: inc/template-tags.php:423
-msgid "Name"
-msgstr ""
-
-#: inc/template-tags.php:426
-msgid "Name *"
-msgstr ""
-
-#: inc/template-tags.php:429
-msgid "Email"
-msgstr ""
-
-#: inc/template-tags.php:432
-msgid "Email *"
-msgstr ""
-
-#: inc/template-tags.php:435
-msgid "Website"
-msgstr ""
-
 #: inc/template-tags.php:437
-msgid "Your website"
+msgid "(Edit)"
 msgstr ""
 
 #: search.php:15
@@ -414,14 +426,14 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: template-parts/content-aside.php:29 template-parts/content-page.php:14
+#: template-parts/content-aside.php:28 template-parts/content-page.php:14
 #: template-parts/content-single.php:23 template-parts/content.php:29
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content-aside.php:46 template-parts/content-page.php:28
+#: template-parts/content-aside.php:45 template-parts/content-page.php:28
 #: template-parts/content-search.php:32 template-parts/content-search.php:46
-#: template-parts/content-single.php:40 template-parts/content.php:45
+#: template-parts/content-single.php:40 template-parts/content.php:46
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""

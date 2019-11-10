@@ -7,12 +7,6 @@
 
 
 ( function( $ ) {
-	
-	
-		
-	//$('.popout-panel').hide();
-
-	//$('.popout-panel').css('top', -($('.popout-panel').height()))
 
 	$('.site-header').css('height', Math.max($('.site-brand').height(), $('.site-header-menu').height()));
 

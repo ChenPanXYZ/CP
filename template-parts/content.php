@@ -3,7 +3,7 @@
  * The template part for displaying content
  */
 ?>
-
+<div class = "article-wrapper">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
@@ -37,6 +37,7 @@
 			?>
 	</div>
 
+
 	<footer class="entry-footer">
 		<?php cp_entry_meta(); ?>
 		<?php
@@ -51,3 +52,4 @@
 			?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>

@@ -24,7 +24,7 @@
 		var sticky = header.offsetTop;
 		  if (window.pageYOffset > sticky) {
 		  	header.classList.add("fixed-at-top");
-			if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 20});}
+			if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 60});}
 			adjustWidth();
 		  } 
 		else {
@@ -33,8 +33,6 @@
 	  	}
 	}
 
-	
-	
 	// Solution with admin bar
 	function solution_with_admin_bar(){
 		init_header_with_admin_bar();
@@ -44,9 +42,6 @@
 		}
 		
 	}
-	
-	
-	
 	
 function admin_bar_within_page() {
 	var admin_bar_height = $("#wpadminbar").height();
@@ -70,10 +65,6 @@ function init_header_with_admin_bar() {
 	}
 }
 	
-	
-	
-
-
 function sticky_menu_with_admin_bar(current_state) {
 	if(!current_state){ //admin bar is still within the screen.
 		$('.popout-panel').css({'top':($('.site-header').height())});
@@ -83,7 +74,7 @@ function sticky_menu_with_admin_bar(current_state) {
 		var sticky = header.offsetTop;
 		  if (window.pageYOffset > sticky) {
 		  header.classList.add("fixed-at-top");
-		if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 20});}
+		if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 60});}
 		adjustWidth();
 	  } else {
 		  header.classList.remove("fixed-at-top");
@@ -98,14 +89,8 @@ function sticky_menu_with_admin_bar(current_state) {
 	}
 }
 	
-	
-	
-	
-	
-	
 // Solution without admin bar (old solution)
 function solution_without_admin_bar(){
-	//alert("hi");
 	window.onscroll = function() {sticky_menu_without_admin_bar()};
 }
 function sticky_menu_without_admin_bar(){
@@ -113,7 +98,7 @@ function sticky_menu_without_admin_bar(){
 	var sticky = header.offsetTop;
 	  if (window.pageYOffset > sticky) {
 	  header.classList.add("fixed-at-top");
-		if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 20});}
+		if($(document).width() >= 785){$('.site-header-menu').css({'padding-right': 60});}
 	adjustWidth();
   } else {
 	  header.classList.remove("fixed-at-top");
@@ -121,9 +106,6 @@ function sticky_menu_without_admin_bar(){
   }
 }
 
-	
-	
-	
 function adjustWidth() {
 	var header = document.getElementById('main-header');
 	var site = document.getElementsByClassName('site')[0];

@@ -94,6 +94,8 @@
 			$( '.fixed-at-top' ).css( 'background-color', newval );
 			$( '#main-header' ).css( 'background-color', newval );
 			$( '.wp-block-calendar table th' ).css( 'background-color', newval );
+			$( 'textarea, input' ).css( 'background-color', newval );
+
 			
 		} );
 	} );
